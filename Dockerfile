@@ -4,7 +4,7 @@
 #
 
 FROM ubuntu
-MAINTAINER Resilio Inc. <support@resilio.com>
+LABEL maintainer="MAINTAINER Resilio Inc. <support@resilio.com>"
 LABEL com.resilio.version="2.6.3"
 
 ADD https://download-cdn.resilio.com/2.6.3/linux-x64/resilio-sync_x64.tar.gz /tmp/sync.tgz
