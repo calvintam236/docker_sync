@@ -3,7 +3,8 @@
 # VERSION               0.1
 #
 
-FROM ubuntu
+FROM debian:stretch-slim
+
 LABEL maintainer="MAINTAINER Resilio Inc. <support@resilio.com>"
 LABEL com.resilio.version="2.6.3"
 
