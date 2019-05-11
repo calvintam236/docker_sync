@@ -1,0 +1,20 @@
+FROM debian:stretch-slim
+
+LABEL maintainer="R3GISTRY"
+LABEL description="Sync in Docker."
+
+WORKDIR /tmp/
+
+ADD \
+https://download-cdn.resilio.com/2.6.3/linux-x64/resilio-sync_x64.tar.gz \
+.
+
+RUN \
+tar -xvf resilio-sync_x64.tar.gz \
+&& mv rslsync /usr/bin/sync \
+&& rm *
+
+VOLUME ["/mnt/sync"]
+
+ENTRYPOINT ["sync"]
+CMD ["--help"]
