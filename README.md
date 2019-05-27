@@ -11,13 +11,13 @@ Due to licensing, no one can redistribute the software. Please build this image 
 - To build the image:
 
 ```console
-$ docker build YOUR_VERSION/Dockerfile.YOUR_ARCH --tag r3gistry/sync:YOUR_VERSION
+$ docker build . --file YOUR_VERSION/Dockerfile.YOUR_ARCH --tag r3gistry/sync:YOUR_VERSION
 ```
 
 - To run the container in background:
 
 ```console
-$ docker run -v sync:/mnt/sync/ -d --name YOUR_CONTAINER_NAME -p YOUR_PORT:YOUR_PORT -p YOUR_PORT:YOUR_PORT/udp r3gistry/sync:YOUR_VERSION --nodaemon --config /mnt/sync/config.conf
+$ docker run -v sync:/mnt/sync/ -d --name YOUR_CONTAINER_NAME -p YOUR_PORT:YOUR_PORT -p YOUR_PORT:YOUR_PORT/udp r3gistry/sync:YOUR_VERSION --nodaemon --config /mnt/sync/sync.conf
 ```
 
 - To fetch logs of a container:
