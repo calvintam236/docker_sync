@@ -12,9 +12,9 @@ https://download-cdn.resilio.com/2.4.5/linux-arm64/resilio-sync_arm64.tar.gz \
 RUN \
 tar -xvf resilio-sync_arm64.tar.gz \
 && mv rslsync /usr/bin/sync \
-&& rm *
+&& rm -r *
 
-VOLUME ["/mnt/sync"]
+VOLUME ["/mnt/sync/"]
 
 ENTRYPOINT ["sync"]
 CMD ["--help"]
