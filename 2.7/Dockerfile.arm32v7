@@ -1,0 +1,20 @@
+FROM debian:stretch-slim
+
+LABEL maintainer="R3GISTRY"
+LABEL description="Sync in Docker."
+
+WORKDIR /tmp/
+
+ADD \
+https://download-cdn.resilio.com/2.7.2/linux-armhf/resilio-sync_armhf.tar.gz \
+.
+
+RUN \
+tar -xvf resilio-sync_armhf.tar.gz \
+&& mv rslsync /usr/bin/sync \
+&& rm -r *
+
+VOLUME ["/mnt/sync/"]
+
+ENTRYPOINT ["sync"]
+CMD ["--help"]
