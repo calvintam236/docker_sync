@@ -6,7 +6,7 @@ LABEL description="Sync in Docker."
 WORKDIR /tmp/
 
 ADD \
-https://download-cdn.resilio.com/2.7.2/linux-arm64/resilio-sync_arm64.tar.gz \
+https://download-cdn.resilio.com/2.7.3/linux-arm64/resilio-sync_arm64.tar.gz \
 .
 
 RUN \
